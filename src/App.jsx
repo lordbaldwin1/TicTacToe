@@ -127,11 +127,21 @@ function Game() {
     } else {
       description = 'Go to game start';
     }
-    return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
-      </li>
-    );
+
+    if (move != currentMove) {
+      return (
+        <li key={move}>
+          <button onClick={() => jumpTo(move)}>{description}</button>
+        </li>
+      );
+    } else {
+      description = 'You are at move #' + move;
+      return (
+        < li key={move}>
+          <span>{description}</span>
+        </li>
+      )
+    }
   });
 
   // passes xisnext state, current state of board, and handlePlay function
