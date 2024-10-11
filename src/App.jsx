@@ -57,6 +57,7 @@ function Board({ xIsNext, squares, onPlay }) {
   // onSquareClick prop passes handleClick at index to square
   // so onClick in Square, handleClick is called, which creates new
   // squares array and sends it to handlePlay (updates history, currentmove, and xIsNext)
+  /*
   return (
     <>
     <div className="status">{status}</div>
@@ -78,6 +79,44 @@ function Board({ xIsNext, squares, onPlay }) {
       </div>
     </>
   )
+    */
+
+  const board = [];
+  const boardSize = 3; //3x3 board
+
+  // loops 0-2 rows, creates row array
+  // calculates index for columns adjusted for row
+  // pushes square to boardRow array, boardRow is array of square components
+  // then pushes boardRow array to board
+  // board is an array of boardRow
+  // each row is a div as above
+  for (let row = 0; row < boardSize; row++) {
+    const boardRow = [];
+    for (let col = 0; col < boardSize; col++) {
+      const index = row * boardSize + col;
+      boardRow.push(
+        <Square
+          value={squares[index]}
+          onSquareClick={() => handleClick(index)}
+          />
+      );
+    }
+    board.push(
+      <div className="board-row">
+        {boardRow}
+      </div>
+    );
+  }
+
+  // returns board array of divs and status
+  return (
+    <div className="status">
+      {status}
+      {board}
+    </div>
+  )
+
+
 }
 
 // handles game states
