@@ -44,3 +44,9 @@
 .square {
   color: #646cffaa;
 }
+
+.board-row button {
+  height: 65px;
+  width: 65px;
+  font-size: 0.5rem;
+}
