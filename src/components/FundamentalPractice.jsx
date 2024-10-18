@@ -14,6 +14,10 @@ const Fundamental = () => {
         } 
     }
 
+    const removeTodo = () => {
+        
+    }
+
     const increment = () => setCount((countValue) => countValue + 1);
     const decrement = () => setCount((countValue) => countValue - 1);
     const setValue = () => {

@@ -4,6 +4,7 @@ import Game from './components/Tictactoe'
 import Chess from './components/Chess'
 import List from './components/Todo'
 import Fundamental from './components/FundamentalPractice'
+import Wordle from './components/Wordle'
 import './App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="/chess" element={<Chess />} />
       <Route path="/todo" element={<List />} />
       <Route path="/fundamental" element={<Fundamental />} />
+      <Route path="/wordle" element={<Wordle />} />
     </Routes>
     </>
   )
