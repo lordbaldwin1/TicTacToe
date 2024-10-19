@@ -6,6 +6,7 @@ import List from './components/Todo'
 import Fundamental from './components/FundamentalPractice'
 import Wordle from './components/Wordle'
 import './App.css'
+import Testing from './components/UseEffect'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/todo" element={<List />} />
       <Route path="/fundamental" element={<Fundamental />} />
       <Route path="/wordle" element={<Wordle />} />
+      <Route path="/useeffect" element={<Testing />} />
     </Routes>
     </>
   )
